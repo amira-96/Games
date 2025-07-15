@@ -1,0 +1,142 @@
+
+:root{
+    --main-color:#272b30;
+    --second-color:#32383e;
+    --navbar-color:#0099CC;
+    --color-text:#fff;
+    --navli-color:RGBA(0, 0, 0, 0);
+
+}
+
+
+
+
+
+body{
+    margin: 0;
+    background-color:var(--main-color);
+ font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+
+}
+*{
+    box-sizing: border-box;
+}
+.nav-item .nav-link.active{
+    color: var(--navbar-color);
+ }
+.main-header{
+    background-image: url(images/wraper.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+}
+.navbar .container{
+    border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+
+}
+.nav-item .nav-link{
+    color: var(--color-text);
+    font-family: var(--header-font);
+    transition: color 0,3s ease;
+
+}
+.nav-item .nav-link:hover{
+    color: var(--navbar-color);
+}
+/**************************/
+/* style for Ui.js*/
+.btn{
+    border-radius: 10px;
+    background-color: #32383e;
+    
+
+}
+
+/* الأنماط الأساسية لبطاقة اللعبة */
+.game-cards-item {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* نمط الصورة داخل البطاقة */
+.game-cards-item .game-thumbnail {
+    width: 100%;
+    height: auto;
+    display: block; 
+    object-fit: cover; 
+    transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    filter: grayscale(80%); 
+    opacity: 0.7; 
+}
+
+/* نمط الـ div الجديد الذي يحتوي على المحتوى */
+.game-cards-item .game-card-content {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* نمط زر "Free" */
+.game-cards-item .game-free-btn {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out; 
+}
+
+
+.game-cards-item:hover {
+    transform: scale(1.03); 
+    z-index: 10; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* تغيير الصورة عند التمرير */
+.game-cards-item:hover .game-thumbnail {
+    filter: grayscale(0%);
+    opacity: 1; 
+}
+
+/* تحريك المحتوى لأعلى قليلاً عند التمرير */
+.game-cards-item:hover .game-card-content {
+    transform: translateY(-8px); 
+}
+
+/* تغيير لون زر "Free" عند التمرير */
+.game-cards-item:hover .game-free-btn {
+    background-color: #ffc107; 
+    color: #212529; 
+    border-color: #ffc107; 
+}
+
+/*end-style-Ui.js*/
+/***************************/
+.badge {
+    color:#000;
+    background-color: #0099CC;
+}
+
+.loding-spinner{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background-color: rgba(0, 0,0, 0.7);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.spinner{
+    border:4px solid #f3f3f3;
+    border-top: 4px solid #FFA500;
+   border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    
+    animation: spin 30s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
